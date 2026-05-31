@@ -1,0 +1,340 @@
+# X-Template V.0.0.0-Genesis
+
+> Cyberpunk Glassmorphism starter template — React + TypeScript + Vite
+
+[![Deploy to GitHub Pages](https://github.com/Ex2-Axon/x-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ex2-Axon/x-template/actions/workflows/deploy.yml)
+[![Bluesky](https://img.shields.io/badge/Bluesky-%40microtronic.bsky.social-0085ff?logo=bluesky&logoColor=white)](https://bsky.app/profile/microtronic.bsky.social)
+
+**Live demo:** https://ex2-axon.github.io/x-template/
+
+![Screenshot](screenshot.png)
+
+---
+
+## Stack
+
+| | |
+|---|---|
+| **Framework** | React 19 + TypeScript |
+| **Build tool** | Vite 8 |
+| **Styling** | CSS (Glassmorphism + Neon) + Tailwind CSS 4 |
+| **Package manager** | pnpm |
+| **Deploy** | GitHub Pages (auto on push) |
+
+---
+
+## Features
+
+- Cyberpunk glassmorphism UI with full animation
+- Neon glow effects — cyan, pink, purple, green
+- Animated grid background + floating particles
+- Glitch text effect on title
+- Scanline CRT overlay
+- Orbit rings on hero image
+- Staggered entrance animations
+- Auto-deploy to GitHub Pages on push
+- Auto-post to Discord, Bluesky, X on push
+
+---
+
+## Getting Started
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start dev server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+---
+
+## GitHub Actions Workflows
+
+| Workflow | Trigger | Description |
+|---|---|---|
+| `deploy.yml` | push to main | Build & deploy to GitHub Pages |
+| `discord-notify.yml` | push to main | Send release embed to Discord |
+| `bluesky-notify.yml` | push to main | Post release to Bluesky |
+| `x-notify.yml` | push to main | Post release to X (Twitter) |
+
+### Required Secrets
+
+Go to **Settings → Secrets and variables → Actions** and add:
+
+| Secret | Description |
+|---|---|
+| `DISCORD_WEBHOOK_URL` | Discord webhook URL |
+| `BSKY_IDENTIFIER` | Bluesky handle (e.g. `microtronic.bsky.social`) |
+| `BSKY_APP_PASSWORD` | Bluesky app password |
+| `X_API_KEY` | X Consumer Key |
+| `X_API_SECRET` | X Consumer Secret |
+| `X_ACCESS_TOKEN` | X Access Token |
+| `X_ACCESS_TOKEN_SECRET` | X Access Token Secret |
+
+---
+
+## Project Structure
+
+```
+x-template/
+├── .github/
+│   └── workflows/
+│       ├── deploy.yml
+│       ├── discord-notify.yml
+│       ├── bluesky-notify.yml
+│       └── x-notify.yml
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+├── package.json
+└── vite.config.ts
+```
+
+---
+
+## Connect
+
+- Bluesky: [@microtronic.bsky.social](https://bsky.app/profile/microtronic.bsky.social)
+- Discord: [Join server](https://discord.gg/8Zeq8VCU)
+- GitHub: [Ex2-Axon](https://github.com/Ex2-Axon)
+
+## Generation Prompt
+```text
+You are building a daily UI project. Below is the theme specification for today.
+
+## Theme Context (daily-context.json)
+```json
+{
+  "day": 37,
+  "date": "2026-05-31",
+  "version": "1.37.0",
+  "project_name": "x-template-037",
+  "theme": {
+    "name": "CHRONO-ARBOR TERMINAL",
+    "style": "A symbiotic fusion of lush, organic solarpunk ecosystems with the crisp, data-rich interfaces of a reconstructed retro-terminal. Think living circuits, holographic flora, and real-time biodata displays rendered with razor-sharp pixel precision and ethereal glow, pushing the boundaries of digital and natural harmony. Ultra-modern, high-fidelity digital craftsmanship meets biophilic innovation.",
+    "mood": "Ethereal, Verdant, Cybernetic, Utopian, Glitch-Deco"
+  },
+  "palette": {
+    "background": "#0A120D",
+    "surface": "#1A2E22",
+    "primary": "#3BCC9B",
+    "accent": "#DAFF00",
+    "text": "#E0F5E8",
+    "muted": "#5C8C7D"
+  },
+  "typography": {
+    "heading": "Clash Display",
+    "body": "Space Grotesk",
+    "size": "fluid-optimized-scale"
+  },
+  "layout": {
+    "structure": "asymmetric|experimental-overlap",
+    "density": "dynamic-compact",
+    "border_style": "Ethereal phosphorescent glows outlining modular panels, integrated with translucent organic forms and data streams. 2px gradient-infused borders with subtle inner shadow."
+  },
+  "animation": {
+    "level": "high",
+    "style": "Bioluminescent ripple effects on hover, generative holographic flora blooms, data stream particle animations, subtle pixel-glitch transitions on component load, fluid organic shape morphing, lens flare accents on interactive elements."
+  },
+  "components": {
+    "hero_text": "SYMBIOTIC DATAFLOW",
+    "subtitle": "Witness the convergence of living systems and computational logic, where nature's algorithms optimize future realities and sustainable innovation flourishes.",
+    "button_label": "ENGAGE ECO-NETWORK",
+    "badge_text": "CHRONO-ARBOR PROTOCOL"
+  },
+  "commit_message": "feat: UI Day 37 — Experimental Theme",
+  "source": "gemini-key1",
+  "selected_component": {
+    "category": "Buttons",
+    "component": "SoloResearchLab_fast-deer-30.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\Buttons\\SoloResearchLab_fast-deer-30.html",
+    "content": "<div class=\"button-group\">\n  <div class=\"button-container\">\n    <a title=\"Go to the home page\" href=\"#\">\n      <svg>\n        <path\n          d=\"M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z\"\n        ></path>\n      </svg>\n    </a>\n    <a title=\"Go to post list page\" href=\"#\">\n      <svg>\n        <path\n          d=\"M5 3a1 1 0 000 2c5.523 0 10 4.477 10 10a1 1 0 102 0C17 8.373 11.627 3 5 3z\"\n        ></path>\n        <path\n          d=\"M4 9a1 1 0 011-1 7 7 0 017 7 1 1 0 11-2 0 5 5 0 00-5-5 1 1 0 01-1-1zM3 15a2 2 0 114 0 2 2 0 01-4 0z\"\n        ></path>\n      </svg>\n    </a>\n    <a title=\"Go to about me page\" href=\"#\">\n      <svg>\n        <path\n          fill-rule=\"evenodd\"\n          d=\"M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z\"\n        ></path>\n      </svg>\n    </a>\n  </div>\n</div>\n\n<style>\n/* Website: https://uiverse.io/emmanuelh-dev/itchy-turtle-88 - Name: emmanuelh-dev - Tags: tooltip, action, button, smooth */\n.button-group {\n  display: flex;\n  background-color: white;\n  padding: 15px; /* 1.25rem assuming base font size is 12px */\n  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),\n    0px 2px 4px -1px rgba(0, 0, 0, 0.06);\n  border-radius: 10px;\n}\n\n.button-container {\n  display: flex;\n  width: 100%;\n  padding: 15px; /* 1.5rem */\n  border-radius: 10px;\n}\n\n.button-container a {\n  color: #3b82f6; /* light-blue-light */\n  border: 2px solid transparent;\n  display: inline-flex;\n  align-items: center;\n  margin-right: 20px; /* 4 * 5 (assuming 1 unit = 5px) */\n  padding: 10px; /* 2.5 * 4 */\n  background-color: #f3f4f6; /* light-secondary */\n  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);\n  border-radius: 9999px;\n  font-size: 14px;\n  text-align: center;\n  transition: all 0.2s ease;\n}\n\n.button-container a:last-child {\n  margin-right: 0;\n}\n\n.button-container a:hover {\n  color: black;\n  border-color: #3b82f6; /* light-blue-light */\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button-container a svg {\n  width: 20px; /* 5 * 4 */\n  height: 20px;\n  fill: currentColor;\n}\n\n/* Dark Mode Styles */\n@media (prefers-color-scheme: dark) {\n  .button-group {\n    background-color: #1f2937; /* box-dark */\n    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.5),\n      0px 2px 4px -1px rgba(0, 0, 0, 0.3);\n  }\n\n  .button-container {\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);\n  }\n\n  .button-container a {\n    color: #9ca3af; /* gray-400 */\n    background-color: #374151; /* button-curved-default-dark */\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);\n  }\n\n  .button-container a:hover,\n  .button-container a:focus,\n  .button-container a:active {\n    background-color: #4b5563; /* button-curved-pressed-dark */\n    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),\n      0px 2px 4px -1px rgba(0, 0, 0, 0.06);\n  }\n}\n\n</style>"
+  }
+}
+```
+
+## Selected Component Reference
+- Category: Buttons
+- Component: SoloResearchLab_fast-deer-30.html
+- Path: C:\Users\User\Documents\GitHub\Axon\x-components\Buttons\SoloResearchLab_fast-deer-30.html
+
+Use the selected component HTML below as the primary design reference for the new UI. Keep the structure and styling assumptions in mind while rewriting the requested files.
+```html
+<div class="button-group">
+  <div class="button-container">
+    <a title="Go to the home page" href="#">
+      <svg>
+        <path
+          d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+        ></path>
+      </svg>
+    </a>
+    <a title="Go to post list page" href="#">
+      <svg>
+        <path
+          d="M5 3a1 1 0 000 2c5.523 0 10 4.477 10 10a1 1 0 102 0C17 8.373 11.627 3 5 3z"
+        ></path>
+        <path
+          d="M4 9a1 1 0 011-1 7 7 0 017 7 1 1 0 11-2 0 5 5 0 00-5-5 1 1 0 01-1-1zM3 15a2 2 0 114 0 2 2 0 01-4 0z"
+        ></path>
+      </svg>
+    </a>
+    <a title="Go to about me page" href="#">
+      <svg>
+        <path
+          fill-rule="evenodd"
+          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+        ></path>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<style>
+/* Website: https://uiverse.io/emmanuelh-dev/itchy-turtle-88 - Name: emmanuelh-dev - Tags: tooltip, action, button, smooth */
+.button-group {
+  display: flex;
+  background-color: white;
+  padding: 15px; /* 1.25rem assuming base font size is 12px */
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  padding: 15px; /* 1.5rem */
+  border-radius: 10px;
+}
+
+.button-container a {
+  color: #3b82f6; /* light-blue-light */
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px; /* 4 * 5 (assuming 1 unit = 5px) */
+  padding: 10px; /* 2.5 * 4 */
+  background-color: #f3f4f6; /* light-secondary */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 9999px;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.button-container a:last-child {
+  margin-right: 0;
+}
+
+.button-container a:hover {
+  color: black;
+  border-color: #3b82f6; /* light-blue-light */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-container a svg {
+  width: 20px; /* 5 * 4 */
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .button-group {
+    background-color: #1f2937; /* box-dark */
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.5),
+      0px 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  .button-container {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .button-container a {
+    color: #9ca3af; /* gray-400 */
+    background-color: #374151; /* button-curved-default-dark */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .button-container a:hover,
+  .button-container a:focus,
+  .button-container a:active {
+    background-color: #4b5563; /* button-curved-pressed-dark */
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}
+
+</style>
+```
+
+## Your Task
+Completely redesign the UI by rewriting these three files from scratch:
+- `src/App.tsx`
+- `src/App.css`
+- `src/index.css`
+
+## Rules for App.tsx
+1. Keep ALL existing imports:
+   - `import { useState, useEffect, useRef } from 'react'`
+   - `import reactLogo from './assets/react.svg'`
+   - `import viteLogo from './assets/vite.svg'`
+   - `import heroImg from './assets/hero.png'`
+   - `import './App.css'`
+2. Keep the `CounterNum` component (useRef + useEffect animation)
+3. Keep the counter button with `onClick` / `setCount` handler
+4. Keep the Documentation section (Vite/React links)
+5. Keep the Social section (GitHub/Discord/X/Bluesky links + SVG icons)
+6. Do NOT use CSS custom properties (`--var-name`) in inline `style` attributes - TypeScript will error
+
+## Rules for CSS
+- Apply the palette, typography, layout structure, animation level, and component text from the JSON above
+- Use Google Fonts via `@import` in `index.css`
+- Match the theme mood: Ethereal, Verdant, Cybernetic, Utopian, Glitch-Deco
+
+## Mandatory Requirements (apply to every build)
+
+### 1. Responsive - Mobile First
+- Design for mobile (320px) first, scale up with `min-width` breakpoints
+- Touch targets minimum 44x44px
+- No horizontal scroll on any screen size
+- Fluid typography: use `clamp()` or responsive units (`rem`, `%`, `vw`)
+- Images and layout must reflow gracefully at 320px, 768px, 1280px
+
+### 2. Footer Copyright
+- The page MUST have a `<footer>` at the bottom
+- Footer text: `© 2026 Microtronic Co., Ltd. All rights reserved. Credit By Axon.`
+- Legal: [Privacy Policy](https://microtronic-thailand.github.io/privacy-policy/?lang=en)
+- Style the footer to match the theme palette (muted text on surface background)
+
+### 3. SEO Standards
+- `index.html` must have a descriptive `<title>`: `SYMBIOTIC DATAFLOW - CHRONO-ARBOR TERMINAL | Microtronic`
+- Add `<meta name="description">` with the subtitle: `Witness the convergence of living systems and computational logic, where nature's algorithms optimize future realities and sustainable innovation flourishes.`
+- Add `<meta name="keywords">` relevant to the theme
+- Add Open Graph tags: `og:title`, `og:description`, `og:type` (website)
+- All images must have meaningful `alt` attributes
+- Use semantic HTML: `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>` where appropriate
+- Heading hierarchy: one `<h1>` (hero), `<h2>` for sections - no skipping levels
+
+## After saving all files
+1. Update `version` in `package.json` to `1.37.0`
+2. Update `<title>` and meta tags in `index.html` as specified above
+3. Run: `pnpm build`
+4. If build succeeds → write `done` to `scripts/build-done.flag`
+5. If build fails with TypeScript errors → fix them and rebuild
+
+```
